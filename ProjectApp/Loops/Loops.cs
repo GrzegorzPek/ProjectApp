@@ -110,50 +110,49 @@ namespace ProjectApp.Loops
         public static void Task1()
         {
             Console.WriteLine("Prime number in  od 0 - 100 ");
-            int[] numbers = new int[100];
+            int[] numbers = new int[10000000];
             int[] notprimenumbers = new int[100];
             int sum = 0;
-            for (int i = 0; i < numbers.Length; i++)
-            {
-                numbers[i] = i+1;
-                Console.WriteLine($" liczba {i} {numbers[i]}");
-            }
-            for (int i = 0; i < numbers.Length; i++)
-            {
-                Console.Write($" liczba  {numbers[i]}");
-                sum = numbers[i] + sum;
-            }
+            //for (int i = 0; i < numbers.Length; i++)
+            //{
+            //    //numbers[i] = i+1;
+            //    //Console.WriteLine($" liczba {i} {numbers[i]}");
+            //}
+            //for (int i = 0; i < numbers.Length; i++)
+            //{
+            //    //Console.Write($" liczba  {numbers[i]}");
+            //    //sum = numbers[i] + sum;
+            //}
             Console.WriteLine($"The sum from 1 to 100 is {sum}");
-            Console.WriteLine("\n");
-            for (int i = numbers.Length-1; i >=0; i--)
+          //  Console.WriteLine("\n");
+            for (int i = numbers.Length-1; i >=0; --i)
             {
                 int rest;
                 int sumrest=0;
-                Console.Write($" {numbers[i]}");
-                for (int j = 0; j < numbers.Length-2; j++)
+                //Console.WriteLine($"\n----{numbers[i]}-------------");
+                Console.WriteLine($"\n---------{i+1}-------------");
+                //for (int j = 2; j < numbers[i]-1; j++)
+                for (int j = 2; j<i; j++)
                 {
-                    rest = numbers[i]%(j+2);
-                    Console.WriteLine($"\nThe number is not prime  {rest}");
+                    rest = numbers[i]%j;
+                    Console.WriteLine($"The rest of divide {numbers[i]} by {j} is {rest}");
 
                     sumrest = sumrest + rest;
                     if (rest == 0)
                     {
-                       // numbers[i] = 0;
-
-                        Console.WriteLine($"The number is not prime the number is  {numbers[i]}\n");
-                        Console.WriteLine($"The number is not prime the rest is {rest}\n");
+                        numbers[i] = 0;
+                       // Console.WriteLine($"The number is not prime the number is  {numbers[i]}\n");
+                       // Console.WriteLine($"The number is not prime the rest is {rest}\n");
                         break;
-                    }
-                    
+                    }                   
                 }
-
             }
+            Console.WriteLine($"The Prime number is : ");
             for (int i = numbers.Length - 1; i >= 0; i--)
             {
                 if (numbers[i]!=0)
-                {
-                    
-                    Console.Write($"Prime numbers are: {numbers[i]}");
+                {                
+                    Console.WriteLine($"--- {numbers[i]}");
                 }
             }
                 
