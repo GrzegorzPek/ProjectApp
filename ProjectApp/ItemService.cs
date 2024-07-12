@@ -17,7 +17,7 @@ namespace ProjectApp
 
         public ConsoleKeyInfo AddNewItemView(MenuActionService actionService)
         {
-            var addNewItemMenu = actionService.GetMenuActionsByMenuName("AddNewItemMenu");
+            var addNewItemMenu = actionService.GetMenuActionsByMenuName("MenuName");
             Console.WriteLine("\nPlease select item type:");
             for (int i = 0; i < addNewItemMenu.Count; i++)
             {
