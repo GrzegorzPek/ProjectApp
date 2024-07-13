@@ -110,7 +110,7 @@ namespace ProjectApp.Loops
         public static void Task1()
         {
             Console.WriteLine("Prime number in  od 0 - 100 ");
-            int[] numbers = new int[10000000];
+            int[] numbers = new int[10000];
             int[] notprimenumbers = new int[100];
             int sum = 0;
             //for (int i = 0; i < numbers.Length; i++)
@@ -127,15 +127,18 @@ namespace ProjectApp.Loops
           //  Console.WriteLine("\n");
             for (int i = numbers.Length-1; i >=0; --i)
             {
+                numbers[i] = i + 1;
                 int rest;
                 int sumrest=0;
                 //Console.WriteLine($"\n----{numbers[i]}-------------");
-                Console.WriteLine($"\n---------{i+1}-------------");
+               // Console.WriteLine($"\n---------{i+1}-------------");
                 //for (int j = 2; j < numbers[i]-1; j++)
                 for (int j = 2; j<i; j++)
                 {
-                    rest = numbers[i]%j;
-                    Console.WriteLine($"The rest of divide {numbers[i]} by {j} is {rest}");
+                    rest = (i+1)%j;
+                    //Console.WriteLine($"The rest of divide {numbers[i]} by {j} is {rest}");
+                    //Console.WriteLine($"The rest of divide {i+1} by {j} is {rest}");
+                  
 
                     sumrest = sumrest + rest;
                     if (rest == 0)
