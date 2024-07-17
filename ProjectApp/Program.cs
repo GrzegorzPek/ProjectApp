@@ -175,9 +175,9 @@ namespace AppExercise
         }
         public static MenuActionService Initialize(MenuActionService actionService)
         {
-            actionService.AddNewAction(1, "Conditions", "MenuName");
-            actionService.AddNewAction(2, "Data Types", "MenuName");
-            actionService.AddNewAction(3, "Loops", "MenuName");
+            actionService.AddNewAction(1, "Conditions Tasks", "MenuName");
+            actionService.AddNewAction(2, "Data Types Tasks", "MenuName");
+            actionService.AddNewAction(3, "Loops Tasks", "MenuName");
 
             actionService.AddNewAction(1, "Add item", "Main");
             actionService.AddNewAction(2, "Remove item", "Main");
@@ -203,6 +203,7 @@ namespace AppExercise
             actionService.AddNewAction(7, "Task7", "Loops");
             actionService.AddNewAction(8, "Task8", "Loops");
             actionService.AddNewAction(9, "Task9", "Loops");
+            actionService.AddNewAction(10, "Task10", "Loops");
 
             actionService.AddNewAction(1, "Task1", "Conditions");
             actionService.AddNewAction(2, "Task2", "Conditions");
