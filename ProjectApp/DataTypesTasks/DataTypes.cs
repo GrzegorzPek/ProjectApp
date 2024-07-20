@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProjectApp.DataTypes
+namespace ProjectApp.DataTypesTasks.DataTypes
 {
     public static class DataTypes
     {
@@ -13,21 +13,24 @@ namespace ProjectApp.DataTypes
         {
             bool exitSubMenu = false;
 
-            //  Console.Clear();
-            Console.WriteLine("Enter the number of Tasks 1- 3 q-quit");
+            Console.Clear();
+            Console.WriteLine("Enter the number of Tasks 1-5, q-quit");
             var operationConditions = Console.ReadKey();
          //   while(operationConditions.KeyChar!='q')
            // {
                 switch (operationConditions.KeyChar)
                 {
                     case '1':
-                        Console.WriteLine("You have choosen task 1");
-                       
-                        exitSubMenu = true;
+                    Console.WriteLine("You have choosen task 1");
+                    Task1();
+
+                    exitSubMenu = true;
                         break;
                     case '2':
-                    Task1();
-                    // TaskDataType2();
+                    Console.WriteLine("You have choosen task 2");
+                   // Task2();
+
+
                     break;
                     case '3':
                        exitSubMenu = true;
@@ -36,7 +39,6 @@ namespace ProjectApp.DataTypes
                         Console.WriteLine("Nieprawidłowa opcja. Naciśnij dowolny klawisz, aby spróbować ponownie.");
                         Console.ReadKey();
                         break;
-             //   }
             }
             bool Task1()
             {
@@ -53,23 +55,14 @@ namespace ProjectApp.DataTypes
                 {
                     Console.WriteLine($"The numbers are the same");
                     exitSubMenu = true;
-
                 }
                 else
                 {
                     Console.WriteLine($"The numbers are different");
                     exitSubMenu = true;
-
                 }
                 return exitSubMenu;
             }
-
-
-
-
-
-
-        }
-       
+        }       
     }
 }

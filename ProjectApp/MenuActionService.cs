@@ -21,7 +21,7 @@ namespace ProjectApp
 
         public List<MenuAction> GetMenuActionsByMenuName(string menuName) 
         {
-            List<MenuAction> result = new List<MenuAction>();   // Kamizelich lista plik ToFile
+            List<MenuAction> result = new List<MenuAction>();   
             foreach (var menuAction in menuActions) 
             { 
                 if (menuAction.MenuName == menuName)
@@ -34,7 +34,7 @@ namespace ProjectApp
 
         public List<MenuAction> IdTasks(int id)
         {
-            List<MenuAction> result = new List<MenuAction>();   // Kamizelich lista plik ToFile
+            List<MenuAction> result = new List<MenuAction>();   
             foreach (var menuAction in menuActions)
             {
                 if (menuAction.Id == id)
@@ -44,18 +44,13 @@ namespace ProjectApp
             }
             return result;
         }
-
         public void ViewAll()
         {
-            List<MenuAction> result = new List<MenuAction>();   // Kamizelich lista plik ToFile
+            List<MenuAction> result = new List<MenuAction>();  
             foreach (var menuAction in menuActions)
-            {
-               
-               
-                    Console.WriteLine(menuAction);
-              
+            {              
+                    Console.WriteLine(menuAction); 
             }
-          //  return result;
         }
     }
 }

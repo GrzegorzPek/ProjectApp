@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProjectApp.Conditions
+namespace ProjectApp.ConditionsTasks
 {
-    public static class ConditionTask1
+    public static class Excercise1
     {
         public static void Task1()
         {

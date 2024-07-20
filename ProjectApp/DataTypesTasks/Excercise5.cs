@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProjectApp.Conditions
+namespace ProjectApp.DataTypesTasks
 {
-    internal class ConditionTask2
+    internal class Excercise5
     {
     }
 }
