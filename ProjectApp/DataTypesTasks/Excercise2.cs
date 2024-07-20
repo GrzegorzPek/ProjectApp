@@ -6,7 +6,16 @@ using System.Threading.Tasks;
 
 namespace ProjectApp.DataTypesTasks
 {
-    internal class Excercise2
+    public static class Excercise2
     {
+        public static void Task2()
+        {
+            char characterOne = 'a';
+            char characterTwo = 'b';
+            char characterThree = 'c';
+
+            Console.WriteLine($"{characterThree},{characterTwo},{characterOne}");
+        }
+
     }
 }

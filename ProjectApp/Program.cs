@@ -10,14 +10,12 @@ namespace AppExercise
 {
     class Program
     {
-        public const string FILE_NAME = @"D:\ImportFile";
         static void Main(string[] args)
         {
             MenuActionService actionService = new MenuActionService();
-            ItemService itemService = new ItemService();
             actionService = Initialize(actionService);
 
-            var mainMenu = actionService.GetMenuActionsByMenuName("MenuName");
+            var mainMenu = actionService.GetMenuActionsByMenuName("Menu");
             var mainMenuC = actionService.GetMenuActionsByMenuName("Conditions");
             var mainMenuDT = actionService.GetMenuActionsByMenuName("DataTypes");
             var mainMenuL = actionService.GetMenuActionsByMenuName("Loops");
@@ -74,9 +72,9 @@ namespace AppExercise
         }
         public static MenuActionService Initialize(MenuActionService actionService)
         {
-            actionService.AddNewAction(1, "Conditions Tasks", "MenuName");
-            actionService.AddNewAction(2, "Data Types Tasks", "MenuName");
-            actionService.AddNewAction(3, "Loops Tasks", "MenuName");
+            actionService.AddNewAction(1, "Conditions Tasks", "Menu");
+            actionService.AddNewAction(2, "Data Types Tasks", "Menu");
+            actionService.AddNewAction(3, "Loops Tasks", "Menu");
 
             actionService.AddNewAction(1, "Add item", "Main");
             actionService.AddNewAction(2, "Remove item", "Main");
@@ -113,7 +111,6 @@ namespace AppExercise
             actionService.AddNewAction(11, "  ---program, który zmienia ocenę ucznia na jej opis wg podanej tabeli", "Conditions");
             actionService.AddNewAction(12, "  ---program, który pobiera numer dnia tygodnia i wyświetla jego nazwę", "Conditions");
             actionService.AddNewAction(13, "  ---program, kalkulator: dodaje, odejmuje, mnoży, dzieli dwie liczby", "Conditions");
-
 
             return actionService;
         }

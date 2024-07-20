@@ -10,24 +10,15 @@ namespace ProjectApp.LoopsTasks
     public class Excercise8
     {
         public static void Task8()
-        {          
-            int b = int.MaxValue;
-            Console.WriteLine($"Zamiana liczby dziesiętnej na binarną podaj liczbę naturalną od {1} do {b}: ");
-                Console.Write("Podaj liczbę całkowitą: ");
-                int liczba = int.Parse(Console.ReadLine());
-            
-          string n = string.Empty;
-                int l2 = liczba;
+        {       
+            Console.WriteLine("Wprowadź ciąg znaków:");
+            string inputString = Console.ReadLine();
 
-                while (l2 > 0)
-                {
-                n = (l2 % 2) + n;
-                l2 = l2/ 2;  
-                Console.Write($"{n} ");
-            }
-           Console.WriteLine($"Reprezentacja binarna liczby: {liczba} to: {n}");
+            char[] charArray = inputString.ToCharArray();
+            Array.Reverse(charArray);
+            string reversedString = new string(charArray);
 
-        }
-
+            Console.WriteLine("Odwrócony ciąg znaków: " + reversedString);
         }
     }
+}

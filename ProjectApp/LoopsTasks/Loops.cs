@@ -11,17 +11,7 @@ namespace ProjectApp.LoopsTasks.Loops
 {
     public static class Loops
     {
-        public static ConsoleKeyInfo AddNewItemView(MenuActionService actionService)
-        {
-            var addNewItemMenu = actionService.GetMenuActionsByMenuName("MenuName");
-            Console.WriteLine("\nPlease select item type:");
-            for (int i = 0; i < addNewItemMenu.Count; i++)
-            {
-                Console.WriteLine($"{addNewItemMenu[i].Id}. {addNewItemMenu[i].Name}");
-            }
-            var operation = Console.ReadKey();
-            return operation;
-        }
+       
         public static void LTasks()
         {
             Console.WriteLine("\nEnter the number of taks");
@@ -59,10 +49,10 @@ namespace ProjectApp.LoopsTasks.Loops
                         Excercise8.Task8();
                         break;
                     case "9":
-                        // LTask9.Task9();
+                        Excercise9.Task9();
                         break;
                     case "10":
-                        //  LTask10.Task10();
+                        Excercise10.Task10();
                         break;
                     default:
                         Console.WriteLine("\nAction you entered does not exist");

@@ -8,61 +8,44 @@ namespace ProjectApp.DataTypesTasks.DataTypes
 {
     public static class DataTypes
     {
-        
+
         public static void DTTask()
         {
             bool exitSubMenu = false;
 
-            Console.Clear();
+
             Console.WriteLine("Enter the number of Tasks 1-5, q-quit");
             var operationConditions = Console.ReadKey();
-         //   while(operationConditions.KeyChar!='q')
-           // {
-                switch (operationConditions.KeyChar)
-                {
-                    case '1':
+
+            switch (operationConditions.KeyChar)
+            {
+                case '1':
                     Console.WriteLine("You have choosen task 1");
-                    Task1();
-
-                    exitSubMenu = true;
-                        break;
-                    case '2':
+                    Excercise1.Task1();
+                    break;
+                case '2':
                     Console.WriteLine("You have choosen task 2");
-                   // Task2();
-
+                    Excercise2.Task2();
+                    break;
+                case '3':
+                    Console.WriteLine("You have choosen task 1");
+                    Excercise3.Task3();
 
                     break;
-                    case '3':
-                       exitSubMenu = true;
-                        break;
-                    default:
-                        Console.WriteLine("Nieprawidłowa opcja. Naciśnij dowolny klawisz, aby spróbować ponownie.");
-                        Console.ReadKey();
-                        break;
+                case '4':
+                    Console.WriteLine("You have choosen task 1");
+                    Excercise4.Task4();
+                    break;
+                case '5':
+                    Console.WriteLine("You have choosen task 1");
+                    Excercise5.Task5();
+                    break;
+                default:
+                    Console.WriteLine("Nieprawidłowa opcja. Naciśnij dowolny klawisz, aby spróbować ponownie.");
+                    Console.ReadKey();
+                    break;
             }
-            bool Task1()
-            {
-                bool exitSubMenu = false;
-                Console.WriteLine("Please enter first number: ");
-                var a = Console.ReadKey();
-                int inta;
-                Int32.TryParse(a.ToString(), out inta);
-                //var idTasks = actio
-                Console.WriteLine("Please enter second number: ");
-                var b = Console.ReadKey();
-                
-                if (a == b)
-                {
-                    Console.WriteLine($"The numbers are the same");
-                    exitSubMenu = true;
-                }
-                else
-                {
-                    Console.WriteLine($"The numbers are different");
-                    exitSubMenu = true;
-                }
-                return exitSubMenu;
-            }
-        }       
+
+        }
     }
 }

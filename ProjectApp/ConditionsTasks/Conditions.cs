@@ -10,17 +10,7 @@ namespace ProjectApp.ConditionsTasks.Conditions
 {
     public static class Conditions
     {
-        public static ConsoleKeyInfo AddNewItemView(MenuActionService actionService)
-        {
-            var addNewItemMenu = actionService.GetMenuActionsByMenuName("MenuName");
-            Console.WriteLine("\nPlease select item type:");
-            for (int i = 0; i < addNewItemMenu.Count; i++)
-            {
-                Console.WriteLine($"{addNewItemMenu[i].Id}. {addNewItemMenu[i].Name}");
-            }
-            var operation = Console.ReadKey();
-            return operation;
-        }
+       
         public static void CTasks()
         {
             Console.WriteLine("\nEnter the number of taks");
